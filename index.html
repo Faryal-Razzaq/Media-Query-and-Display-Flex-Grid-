@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query, Flexbox & Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <h2>CSS Learning</h2>
+            <span>Web Development Assignment</span>
+        </nav>
+
+        <div class="hero-content">
+            <p class="tag">CSS FUNDAMENTALS</p>
+            <h1>Media Query, Flexbox <br>& <span>CSS Grid</span></h1>
+            <p>
+                Learn how to create responsive layouts and arrange
+                website elements using modern CSS.
+            </p>
+            <a href="#media-query" class="btn">Explore Concepts</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Media Query Section -->
+        <section class="section" id="media-query">
+            <p class="section-label">01 — RESPONSIVE DESIGN</p>
+            <h2>What is a Media Query?</h2>
+
+            <p class="description">
+                A media query is a CSS technique that allows a website
+                to change its style according to the screen size,
+                device width, or other device features.
+                It helps us create responsive websites for mobiles,
+                tablets, and desktops.
+            </p>
+
+            <div class="info-card">
+                <h3>Why do we use Media Queries?</h3>
+                <ul>
+                    <li>To make websites mobile-friendly.</li>
+                    <li>To change font sizes on smaller screens.</li>
+                    <li>To adjust spacing and layouts.</li>
+                    <li>To provide a better user experience on every device.</li>
+                </ul>
+            </div>
+
+            <h3 class="subheading">Example: Media Query</h3>
+
+            <pre><code>/* Default style */
+.box {
+    background: purple;
+    padding: 30px;
+}
+
+/* For screens 600px or smaller */
+@media (max-width: 600px) {
+    .box {
+        background: deeppink;
+        padding: 15px;
+    }
+}</code></pre>
+
+            <div class="demo-box">
+                <strong>Responsive Demo</strong>
+                <p>Resize your browser window to see this section change.</p>
+            </div>
+        </section>
+
+        <!-- Flexbox and Grid Section -->
+        <section class="section">
+            <p class="section-label">02 — LAYOUT SYSTEMS</p>
+            <h2>Flexbox vs CSS Grid</h2>
+
+            <p class="description">
+                Flexbox and Grid are CSS layout systems used to arrange
+                elements on a webpage. The main difference is how they
+                manage rows and columns.
+            </p>
+
+            <div class="comparison">
+                <article class="concept-card flex-card">
+                    <div class="icon">↔</div>
+                    <h3>CSS Flexbox</h3>
+                    <p>
+                        Flexbox is a one-dimensional layout system.
+                        It arranges elements in a row OR a column.
+                    </p>
+                    <ul>
+                        <li>Works in one dimension.</li>
+                        <li>Great for navigation bars.</li>
+                        <li>Useful for buttons and aligned items.</li>
+                    </ul>
+                </article>
+
+                <article class="concept-card grid-card">
+                    <div class="icon">▦</div>
+                    <h3>CSS Grid</h3>
+                    <p>
+                        CSS Grid is a two-dimensional layout system.
+                        It arranges elements in rows AND columns.
+                    </p>
+                    <ul>
+                        <li>Works in two dimensions.</li>
+                        <li>Great for page layouts.</li>
+                        <li>Useful for galleries and dashboards.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Live Flexbox Example -->
+        <section class="section">
+            <p class="section-label">03 — LIVE EXAMPLE</p>
+            <h2>Flexbox Layout</h2>
+            <p class="description">
+                These boxes are arranged using display: flex.
+            </p>
+
+            <div class="flex-container">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+
+            <pre><code>.flex-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}</code></pre>
+        </section>
+
+        <!-- Live Grid Example -->
+        <section class="section">
+            <p class="section-label">04 — LIVE EXAMPLE</p>
+            <h2>CSS Grid Layout</h2>
+            <p class="description">
+                These boxes are arranged using display: grid.
+            </p>
+
+            <div class="grid-container">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+
+            <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}</code></pre>
+        </section>
+
+        <!-- Difference Table -->
+        <section class="section">
+            <p class="section-label">05 — QUICK REVISION</p>
+            <h2>Key Differences</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Flexbox</th>
+                            <th>Grid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dimension</td>
+                            <td>One-dimensional</td>
+                            <td>Two-dimensional</td>
+                        </tr>
+                        <tr>
+                            <td>Direction</td>
+                            <td>Row or column</td>
+                            <td>Rows and columns</td>
+                        </tr>
+                        <tr>
+                            <td>Best for</td>
+                            <td>Navigation and alignment</td>
+                            <td>Complete page layouts</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Property</td>
+                            <td>display: flex</td>
+                            <td>display: grid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Keep Learning, Keep Growing!</h3>
+        <p>CSS Assignment | Media Query, Flexbox & Grid</p>
+        <p class="name">Made with care by Faryal Razzaq</p>
+    </footer>
+
+</body>
+</html>
